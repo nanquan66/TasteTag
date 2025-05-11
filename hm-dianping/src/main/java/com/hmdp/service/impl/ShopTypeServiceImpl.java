@@ -41,7 +41,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
                     .list();
             // 3. 写入缓存（设置10分钟过期）
             redisTemplate.opsForValue().set(cacheKey, typeList, 10, TimeUnit.MINUTES);
-        }
+    }
 
         return typeList;
     }
