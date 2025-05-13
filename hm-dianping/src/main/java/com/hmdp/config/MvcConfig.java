@@ -28,13 +28,15 @@ public class MvcConfig implements WebMvcConfigurer {
         //登录拦截器
         registry.addInterceptor(new LoginInterceptor())
                 .excludePathPatterns(
-                        "/user/code",
-                        "/user/login",
-                        "/blog/hot",
-                        "/shop/**",
-                        "/shop-type/**",
-                        "/upload/**",
-                        "/voucher/**"
+//                        "/user/code",
+//                        "/user/login",
+//                        "/blog/hot",
+//                        "/shop/**",
+//                        "/shop-type/**",
+//                        "/upload/**",
+//                        "/voucher/**",
+//                        "/voucher-order/**"
+                        "/**"
                         ).order(1);         // .order(1)表示优先级，数字越小，优先级越高
         //token刷新的拦截器
         registry.addInterceptor(new RefreshTokenInterceptor(stringRedisTemplate)).addPathPatterns("/**").order(0);   // "/**"表示匹配所有路径
