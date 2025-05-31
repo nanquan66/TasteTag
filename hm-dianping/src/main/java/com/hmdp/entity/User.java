@@ -20,8 +20,8 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
-@TableName("tb_user")
+@Accessors(chain = true)                    //
+@TableName("tb_user")                       // 指定该实体类对应的数据库表名为 tb_user
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
