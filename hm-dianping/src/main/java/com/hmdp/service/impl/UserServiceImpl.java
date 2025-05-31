@@ -91,7 +91,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             user = createUserWithPhone(phone);
         }
 
-        // TODO 7.保存用户信息到redis中
+        // 7.保存用户信息到redis中
         // 7.1 随时生成token，作为登录令牌
         String token = UUID.randomUUID().toString();
         // 7.2 将user对象转为hashmap存储
